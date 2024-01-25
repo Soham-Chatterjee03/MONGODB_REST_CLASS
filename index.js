@@ -35,6 +35,12 @@ async function main(){
 // chat1.save().then((res)=>{
 //     console.log(res);
 // });
+app.get("/",(req,res)=>{
+    res.render("home.ejs");
+    
+    
+});
+
 
 //INDEX ROUTE
 app.get("/chats",async (req,res)=>{
@@ -93,9 +99,6 @@ app.delete("/chats/:id",async(req,res)=>{
 
 
 
-app.get("/",(req,res)=>{
-    res.send("Root is working");
-});
 
 app.listen(8080,()=>{
     console.log("Serve is listining on port 8080");
